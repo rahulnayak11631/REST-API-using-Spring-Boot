@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.rest_api_spring_boot.Controllers.Services.BookService;
 import com.example.rest_api_spring_boot.Entities.Book;
-import org.springframework.web.bind.annotation.PutMapping;
 
 
 
@@ -41,6 +41,7 @@ public class BookController {
     public List<Book> get_Books() {
         return this.bookservice.get_allBooks();
     }
+
     @GetMapping("/books/{id}")
     public Book getBook(@PathVariable("id") int id) {
         return this.bookservice.get_book_by_id(id);
