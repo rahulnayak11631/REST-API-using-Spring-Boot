@@ -37,7 +37,7 @@ public class BookController {
     @Autowired
     private BookService bookservice;
 
-    @GetMapping("/books")
+    @GetMapping("/getbooks")
     public List<Book> get_Books() {
         return this.bookservice.get_allBooks();
     }
